@@ -1,6 +1,6 @@
 {
   "name": "number-stringify",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Convert integer into english words.",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
