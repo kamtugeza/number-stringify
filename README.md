@@ -28,7 +28,7 @@ Before you start using the library you have to initialize a stringifier with all
 import { IntStr, IntThousandExp } from 'number-stringify';
 
 const str = new IntStr();
-const strWithExp = new IntThousandExp(intStr);
+const strWithExp = new IntThousandExp(str);
 
 str.stringify(2345) // two thousand three hundred and forty-five
 strWithExp.stringify(2345) // twenty-three hundred and forty-five
