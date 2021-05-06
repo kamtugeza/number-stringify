@@ -1,19 +1,11 @@
-export const SLICE_BY_1_DIGITS = 1;
-export const SLICE_BY_2_DIGITS = 2;
-export const SLICE_BY_3_DIGITS = 3;
-
 export abstract class IntParserBase {
-  readonly minStep = 10;
-  protected _stepSize: number;
   
-  constructor(protected _sliceBy: number = SLICE_BY_3_DIGITS) {
-    this._stepSize = Math.pow(this.minStep, this._sliceBy);
-  };
-
   abstract parse(valye: number): number[];
 }
 
 export class IntParser extends IntParserBase {
+  readonly _sliceBy = 3;
+  readonly _stepSize = 1000;
 
   parse(value: number) {
     const numbAbs = Math.floor(Math.abs(value));
