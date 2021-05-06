@@ -1,15 +1,39 @@
-# Arabic number conversion tool
+# Number Stringify
 
-Create a web-based solution that converts numeric input into the English phrase of that number.
+Number Stringify is a small library that took an integer and converts it into words.
 
-For example:
+Let's see examples of the task:
+- 0 → zero
+- 9 → nine
+- 13 → thirteen
+- 32 → thirty-two
+- 120 → one hundred and twenty
+- 3023 → three thousand twenty-three
+- 9904 → ninety-nine hundred and four
+- 1403068 → one million four hundred and three thousand sixty-eight
 
-- 7 === seven
-- 42 === forty-two
-- 2001 === two thousand and one
-- 1999 === nineteen hundred and ninety-nine
-- 17999 === seventeen thousand nine hundred and ninety-nine
-- 342251 === three hundred and forty-two thousand two hundred and fifty-one
-- 1300420 === one million three hundred thousand four hundred and twenty
+## Instalation
 
-__Note: Numbers greater than 100 and less than 1000 always include the word "and" between the hundreds figure and the other part, numbers greater than 1000 include "and" between any hundreds figure and the figure less than 100.__
+All you need to start work with the library is just install npm dependency to your project.
+
+```bash
+npm i number-stringify
+```
+
+## Examples
+
+Before you start using the library you have to initialize a stringifier with all exceptions you want.
+
+```js
+import { IntStr, IntThousandExp } from 'number-stringify';
+
+const str = new IntStr();
+const strWithExp = new IntThousandExp(intStr);
+
+str.stringify(2345) // two thousand three hundred and forty-five
+strWithExp.stringify(2345) // twenty-three hundred and forty-five
+```
+
+## License
+
+Number Stringify is [MIT licensed](./LICENSE).
