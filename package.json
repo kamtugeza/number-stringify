@@ -1,6 +1,6 @@
 {
   "name": "number-stringify",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Convert integer into english words.",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
@@ -19,7 +19,14 @@
     "prepublishOnly": "npm run build",
     "test": "jest --watch"
   },
-  "keywords": [],
+  "keywords": ["number", "integer", "stringify"],
   "author": "Oleksii Novikov <hello@novikraft.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kamtugeza/number-stringify.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/kamtugeza/number-stringify/issues"
+  }
 }
